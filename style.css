@@ -1,0 +1,106 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #1c1b19;
+  --muted: #6b675f;
+  --accent: #e2a200;
+  --line: #e4e0d7;
+  --field: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412;
+    --text: #ece9e2;
+    --muted: #9c978c;
+    --accent: #f2b81c;
+    --line: #2e2c28;
+    --field: #1d1c19;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 20px 40px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+h1 { margin: 0; font-size: 2rem; line-height: 1.2; }
+h2 { font-size: 1.2rem; margin: 48px 0 16px; }
+
+.tagline { margin: 4px 0 0; color: var(--muted); }
+
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.links a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+}
+.links a:hover { border-color: var(--accent); }
+
+form { display: grid; gap: 14px; }
+label { display: grid; gap: 4px; font-size: 0.9rem; color: var(--muted); }
+.opt { font-size: 0.8rem; }
+
+input, textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
+}
+input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+button {
+  justify-self: start;
+  font: inherit;
+  font-weight: 600;
+  background: var(--accent);
+  color: #1c1b19;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.hp { display: none; }
+
+footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); }
+
+@media (max-width: 480px) {
+  header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .portrait { width: 96px; height: 96px; }
+}
