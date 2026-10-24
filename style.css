@@ -51,6 +51,7 @@ h1 { margin: 0; font-size: 2rem; line-height: 1.2; }
 h2 { font-size: 1.2rem; margin: 48px 0 16px; }
 
 .tagline { margin: 4px 0 0; color: var(--muted); }
+.nw { white-space: nowrap; }
 
 a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 2px; }
 
